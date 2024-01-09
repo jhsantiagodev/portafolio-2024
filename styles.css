@@ -230,7 +230,9 @@ h1, h2, h3, h4, h5, h6 {
    transition: all 0.2s ease-in-out;
 }
 
-.menu__option:hover .menu__icon {
+/*se agrega efecto de colorear icono*/
+.menu__option:hover .menu__icon,
+.menu__link--active .menu__icon {
    color: var(--color-secondary);
 }
 
@@ -323,14 +325,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__services,
 .about__reviews,
-.about__clients {
+.about__clients,
+.about__prices,
+.about__extra {
    width: 100%;
    margin-bottom: 3rem;
 }
 
 .services__header,
 .reviews__header,
-.clients__header {
+.clients__header,
+.prices__header,
+.extra__header {
    display: inline-block;
    padding-right: 1.2rem;
    position: relative;
@@ -339,13 +345,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .services__title,
 .reviews__title,
-.clients__title {
+.clients__title,
+.prices__title,
+.extra__title {
    font-size: 2.1rem;
 }
 
 .services__title::after,
 .reviews__title::after,
-.clients__title::after {
+.clients__title::after,
+.prices__title::after,
+.extra__header::after {
    content: "";
    position: absolute;
    top: 15px;
@@ -461,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__clients {
    width: 100%;
-   margin-bottom: 5rem;
+   margin-bottom: 2rem;
 }
 
 .clients__header {
@@ -488,4 +498,131 @@ h1, h2, h3, h4, h5, h6 {
    width: 145px;
    padding: 1.5rem;
    margin-bottom: 1.5rem;
+}
+
+.prices__container {
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 5rem;
+}
+
+.prices__box {
+   height: 100%;
+   flex-basis: 50%;
+   margin-right: 3rem;
+   padding: 3rem;
+   border: 3px solid var(--color-border-review);
+   border-radius: 1.5rem;
+   text-align: center;
+   transition: all 0.3s ease-in-out;   
+}
+
+/*alinear la caja con los demas elementos*/
+.prices__box:last-child {
+   margin-right: 0rem;
+}
+
+.prices__box:hover,
+.extra__info:hover {
+   box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+   border: 3px solid var(--color-subtitle);
+   transform: translateY(-1rem);
+   cursor: pointer;
+}
+
+.prices__subtitle {
+   margin-bottom: 3rem;
+}
+
+
+.prices__text {
+   position: relative;
+   display: inline-block;
+}
+
+.prices__box:hover .prices__text {
+   border-bottom: 2px solid var(--color-secondary);
+}
+
+.prices__price {
+   padding-bottom: 1rem;
+}
+
+.prices__number {
+   display: block;
+   font-size: 4.2rem;
+   line-height: 1;
+   color: var(--color-title);
+}
+
+.prices__advice {
+   display: block;
+   color: var(--color-subtitle);
+}
+
+.prices__buy {
+   padding-top: 2.5rem;
+   padding-bottom: 3rem;
+}
+
+.prices__btn {
+   display: inline-block; /*obtenga el tamaño*/
+   padding: 1.2rem 3.1rem;
+   border: 2px solid var(--color-subtitle);
+   box-shadow: 0 10px 10px -8px var(--color-border-review);
+   border-radius: 3rem;
+   transition: all 0.2s ease-in-out;
+}
+
+.prices__btn:hover {
+   border: 2px solid var(--color-secondary);
+   background-color: var(--color-secondary);
+   color: var(--color-principal);
+}
+
+.prices__reward {
+   font-size: 1.4rem;
+   padding: 0.4rem 0;
+}
+
+.extra__container {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: 1.5rem;
+}
+
+.extra__info {
+   flex-basis: 30%;
+   padding: 2.5rem 1rem;
+   border: 2px solid var(--color-border-review);
+   border-radius: 1rem;
+   text-align: center;
+   transition: all 0.2s ease-in-out;
+}
+
+.extra__info:hover {
+   transform: translateY(-5px);
+}
+
+.extra__icon {
+   font-size: 3.3rem;
+   color: var(--color-secondary);
+   margin-bottom: 1rem;
+}
+
+.extra__subtitle {
+   font-size: 1.5rem;
+   margin: 1.5rem;
+}
+
+.extra__quantity {
+   display: block;
+   margin: 1.5rem 1rem;
+   margin-bottom: 0;
+   font-size: 3.6rem;
+   line-height: 5rem;
+   color: var(--color-subtitle);
 }
