@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
    right: 100%; /*apartir del pixel 0 del div se vaya a la derecha*/
 }
 
-/*styles general*/
+/*styles general, styles About*/
 .content__about,
 .content__resume {
    display: block;
@@ -327,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: 500;
 }
 
+/*styles compartidos*/
 .about__services,
 .about__reviews,
 .about__clients,
@@ -340,7 +341,8 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__header,
 .clients__header,
 .prices__header,
-.extra__header {
+.extra__header,
+.resume__subheader {
    display: inline-block;
    padding-right: 1.2rem;
    position: relative;
@@ -351,7 +353,8 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__title,
 .clients__title,
 .prices__title,
-.extra__title {
+.extra__title,
+.resume__subtitle {
    font-size: 2.1rem;
 }
 
@@ -359,7 +362,8 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__title::after,
 .clients__title::after,
 .prices__title::after,
-.extra__header::after {
+.extra__header::after,
+.resume__subtitle::after {
    content: "";
    position: absolute;
    top: 15px;
@@ -629,4 +633,67 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 3.6rem;
    line-height: 5rem;
    color: var(--color-subtitle);
+}
+
+/*Styles Curriculum*/
+.resume__container {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+}
+
+.resume__left {
+   flex-basis: 58%;
+   margin-right: 1.5rem;
+}
+
+.resume__timelines {
+   margin-bottom: 5rem;
+}
+
+.timelines__timeline {
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 1.5rem;
+}
+
+.timeline__header {
+   flex-basis: 30%;
+   text-align: right;
+   padding-right: 2.5rem;
+}
+
+.timeline__year {
+   margin: 3px 0;
+   font-size: 1.4rem;
+   line-height: 1.9rem;
+}
+
+.timeline__company {
+   display: block;
+   font-size: 1.3rem;
+   font-weight: 300;
+   color: var(--color-text-company);
+}
+
+.timeline__description {
+   flex-basis: 70%;
+   padding-left: 2.5rem;
+   padding-right: 1.5rem;
+}
+
+.timeline__title {
+   font-size: 1.6rem;
+   margin-bottom: 0.3rem;
+}
+
+.timeline__text {
+   font-size: 1.4rem;
+   margin-bottom: 1rem;
+}
+
+.resume__right {
+   flex-basis: 41%;
 }
