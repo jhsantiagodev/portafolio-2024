@@ -259,7 +259,8 @@ h1, h2, h3, h4, h5, h6 {
 /*styles general, styles About*/
 .content__about,
 .content__resume,
-.content__portfolio {
+.content__portfolio,
+.content__blog {
    display: block;
    height: 100%;
    min-height: 100%;
@@ -270,21 +271,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__header,
 .resume__header,
-.portfolio__header {
+.portfolio__header,
+.blog__header {
    display: inline-block; /*mover el elemento de after y quede detras con el right: -25px*/
    margin-bottom: 4.5rem;
 }
 
 .about__title,
 .resume__title,
-.portfolio__title {
+.portfolio__title,
+.blog__title {
    font-size: 3.2rem;
    position: relative;
 }
 
 .about__title::after,
 .resume__title::after,
-.portfolio__title::after {
+.portfolio__title::after,
+.blog__title::after {
    content: "";
    position: absolute;
    top: 20px;
@@ -945,4 +949,92 @@ h1, h2, h3, h4, h5, h6 {
 .gallery__item:hover .gallery__icon,
 .gallery__item:hover .gallery__category {
    opacity: 1;
+}
+
+.blog__articles {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin-bottom: 2.5rem;
+}
+
+.articles__article { /*otra forma de separar elementos, gap, con margenes y paddin*/
+   flex-basis: 50%;
+   padding: 0 1.5rem;
+   padding-bottom: 3.5rem;
+}
+
+.article__top {
+   position: relative;
+   overflow: hidden;
+}
+
+.article__category {
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+   font-size: 1.1rem;
+   padding: 0.1rem 0.7rem;
+   line-height: 2rem;
+   background-color: var(--color-principal);
+   color: var(--color-text);
+   border-radius: 0.5rem;
+   z-index: 3; /*El texto no se mueva con el hover*/
+}
+
+.article__mask {
+   width: 100%;
+   height: 18.5rem;
+   overflow: hidden;
+}
+
+.article__img {
+   display: block;
+   transition: all 0.3s ease-in-out;
+   z-index: 1;
+}
+
+.article__top:hover .article__img {
+   transform: scale(1.1);
+}
+
+.article__logo {
+   transition: all 0.2s ease-in-out;
+   opacity: 0;
+}
+
+.article__icon {
+   position: absolute; /*Centrar el logo restando del tamaño del mismo*/
+   top: calc(50% - 2.2rem); 
+   left: calc(50% - 2.2rem);
+   width: 4.4rem;
+   font-size: 4.4rem;
+   text-align: center;
+   color: var(--color-principal);
+}
+
+.article__top:hover .article__logo {
+   opacity: 1;
+}
+
+.article__bottom {
+   margin: 0;
+   padding: 2.1rem;
+   padding-top: 1.5rem;
+   border: 1px solid var(--color-border-review);
+   border-top: 0;
+   border-radius: 0 0 5px 5px;
+}
+
+.article__date {
+   display: block;
+   font-size: 1.1rem;
+   line-height: 1.2rem;
+   font-weight: 500;
+   color: var(--color-subtitle);
+}
+
+.article__title {
+   font-size: 1.8rem;
+   margin-top: 0.5rem;
 }
