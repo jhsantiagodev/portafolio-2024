@@ -258,7 +258,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*styles general, styles About*/
 .content__about,
-.content__resume {
+.content__resume,
+.content__portfolio {
    display: block;
    height: 100%;
    min-height: 100%;
@@ -268,19 +269,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__header,
-.resume__header {
+.resume__header,
+.portfolio__header {
    display: inline-block; /*mover el elemento de after y quede detras con el right: -25px*/
    margin-bottom: 4.5rem;
 }
 
 .about__title,
-.resume__title {
+.resume__title,
+.portfolio__title {
    font-size: 3.2rem;
    position: relative;
 }
 
 .about__title::after,
-.resume__title::after {
+.resume__title::after,
+.portfolio__title::after {
    content: "";
    position: absolute;
    top: 20px;
@@ -848,4 +852,97 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 1.2rem;
    color: var(--color-subtitle);
    opacity: 0.9rem;
+}
+
+.portfolio__navbar {
+   margin-bottom: 3rem;
+}
+
+.portfolio__menu {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.portfolio__option {
+   font-size: 1.3rem;
+   opacity: 0.7;
+}
+
+.portfolio__option--active {
+   opacity: 1;
+}
+
+.portfolio__link {
+   cursor: pointer;
+   transition: all 0.2s ease ease-in-out;
+}
+
+.portfolio__link:hover {
+   color: var(--color-secondary);
+   border-bottom: 1px solid var(--color-secondary);
+}
+
+.portfolio__gallery {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.gallery__item {
+   position: relative;
+   flex-basis: 33%;
+   padding: 0.7rem;
+}
+
+.gallery__container-img { /*Imagen no sobresalga del cuadro usando el efecto de scala*/
+   overflow: hidden;
+}
+
+.gallery__img {
+   transition: all 0.3s ease-in-out;
+}
+
+.gallery__item:hover .gallery__img {
+   transform: scale(1.1);
+}
+
+.gallery__title {
+   font-size: 1.6rem;
+   font-weight: bold;
+   padding: 1.5rem 0;
+}
+
+.gallery__icon {
+   position: absolute;
+   top: 1.5rem;
+   right: 1.5rem;
+   width: 3rem;
+   height: 3rem;
+   font-size: 1.6rem;
+   text-align: center;
+   line-height: 3rem !important;
+   background-color: var(--color-principal);
+   color: var(--color-secondary);
+   transition: all 0.4s ease-in-out;
+   opacity: 0;
+}
+
+.gallery__category {
+   position: absolute;
+   top: 1.5rem;
+   left: 1.5rem;
+   padding: 0.2rem 0.7rem;
+   font-size: 1.1rem;
+   background-color: var(--color-principal);
+   color: var(--color-text);
+   border-radius: 1rem;
+   transition: all 0.4s ease-in-out;
+   opacity: 0;
+}
+
+.gallery__item:hover .gallery__icon,
+.gallery__item:hover .gallery__category {
+   opacity: 1;
 }
