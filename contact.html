@@ -6,7 +6,9 @@
    <link rel="stylesheet" href="reset.css">
    <link rel="stylesheet" href="scroll.css">
    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="loader.css">
    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+   <script type="text/javascript" src="main.js" defer></script>
    <title>Portafolio</title>
 </head>
 
@@ -142,10 +144,12 @@
                </section>
 
                <section class="contact__form-box">
-                  <div class="contact__map"></div>
+                  <div class="contact__map" id="map-iframe">
+                     <span class="loader"></span>
+                  </div>
 
                   <header class="contact__form-header">
-                     <h3 class="contact__subtitle">¿Como Puedo <span class="title__color">Ayudarte ?</span></h3>
+                     <h3 class="form-header__title">¿Como Puedo <span class="title__color">Ayudarte ?</span></h3>
                   </header>
 
                   <form class="contact__form">
@@ -169,14 +173,14 @@
                         </section>
 
                         <section class="form__right">
-                           <div class="form__group">
+                           <div class="form__group form__group--textarea">
                               <textarea class="form__input form__input--area" name="message" required placeholder="message"></textarea>
                               <label for="message" class="form__label">Message</label>
                            </div>
                         </section>
-
-                        <input type="submit" class="form__button" value="Enviar Mensaje">
                      </div>
+
+                     <input type="submit" class="form__button" value="Enviar Mensaje">
                   </form>
                </section>
            </div>
