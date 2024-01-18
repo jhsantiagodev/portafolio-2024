@@ -893,7 +893,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio__link:hover {
    color: var(--color-secondary);
-   border-bottom: 1px solid var(--color-secondary);
 }
 
 .portfolio__gallery {
