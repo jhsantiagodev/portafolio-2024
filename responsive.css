@@ -1,3 +1,7 @@
+.layout__menu-togle {
+   display: none;
+}
+
 @media (max-width: 1490px) {
    body {
       padding: 0;
@@ -44,8 +48,128 @@
       grid-template-columns: 100%;
    }
 
+   .layout__menu-togle {
+      display: block;
+      position: absolute;
+      width: 4.8rem;
+      height: 4.8rem;
+      right: 1rem;
+      top: 1rem;
+      font-size: 2.5rem;
+      line-height: 4.8rem !important;
+      text-align: center;
+      background-color: var(--color-secondary);
+      color: var(--color-principal);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      z-index: 101;
+   }
+
+   .menu-toggle__icon {
+      display: block;
+      position: absolute;
+      top: 25%;
+      left: 28%;
+      color: var(--color-principal);
+      transition: all 0.3s ease-in-out;
+   }
+
+   .fa-bars {
+      opacity: 1;
+   }
+
+   /*provicional*/
+   .fa-xmark {
+      opacity: 0;
+   }
+
+   /*Menu aside responsive*/
    .layout__aside {
+      display: block;
+      position: absolute;
+      max-width: 330px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      overflow: auto;
+      border-radius: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 100; /*sobre pone todos los z-index que existan en la web*/
+
+      margin-right: -100%;
+      opacity: 0;
+   }
+
+   .layout__aside--active {
+      width: 100%;
+      margin-right: 0;
+      opacity: 1;
+   }
+
+   .layout__aside--hidden {
+      margin-right: -100%;
+      opacity: 0;
+   }
+
+   .user-info__container-image {
+      width: 13rem;
+      margin-top: 3rem;
+      display: inline-block;
+   }
+
+   .user-info__name {
+      font-size: 3rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+   }
+
+   .menu__list {
+      position: static;
+      width: 100%;
+      background-color: var(--color-secondary);
+      box-shadow: none;
+      margin-left: 0;
+      padding: 0;
+      min-height: auto;
+   }
+
+   .menu__link {
+      text-decoration: none;
+      display: block;
+      padding: 1.2rem 0;
+   }
+
+   .menu__icon {
       display: none;
+   }
+
+   .menu__overlay {
+      position: static;
+      opacity: 0.8;
+      margin-top: 0;
+      padding: 0;
+      box-shadow: none;
+      font-size: 1.6rem;
+   }
+
+   .menu__link--active .menu__overlay {
+      opacity: 1;
+   }
+
+   .links__social {
+      margin-top: 0;
+   }
+
+   .user-info__footer {
+      position: static;
+      padding-bottom: 2rem;
+   }
+
+   .layout__menu {
+      position: static;
+      margin: 3rem 0;
    }
 
    .layout__content {
@@ -57,10 +181,6 @@
    .content__page {
       border-radius: 0;
       height: 100vh;
-   }
-
-   .layout__menu {
-      position: static;
    }
 }
 
