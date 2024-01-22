@@ -46,6 +46,7 @@
       border-radius: 0;
       grid-template-areas: "content";
       grid-template-columns: 100%;
+      overflow-x: hidden; /*ocultar el scrool que te movia hacia los lados*/
    }
 
    .layout__menu-togle {
@@ -88,7 +89,7 @@
    .layout__aside {
       display: block;
       position: absolute;
-      max-width: 330px;
+      max-width: 33rem;
       top: 0;
       right: 0;
       bottom: 0;
