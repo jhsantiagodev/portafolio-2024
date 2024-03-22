@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
    position: absolute;
    display: block;
    right: 0;
-   margin-top: -3rem;
+   margin-top: -3rem; /*posicionar textos en medio*/
    padding: 0.5rem 1rem;
    opacity: 0;
    color: var(--color-principal);
@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service__title {
    font-size: 1.8rem;
-   margin: 1rem;
+   margin: 1rem 0;
 }
 
 .service__description {
@@ -488,6 +488,7 @@ h1, h2, h3, h4, h5, h6 {
 .review__company:hover {
    color: var(--color-secondary);
 }
+
 .review__icon {
    font-size: 4rem;
    opacity: 0.6;
@@ -558,7 +559,6 @@ h1, h2, h3, h4, h5, h6 {
 .prices__subtitle {
    margin-bottom: 3rem;
 }
-
 
 .prices__text {
    position: relative;
@@ -783,7 +783,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills__percentage {
-   width: 40%;
+   width: 40%; /*Ejemplo del ancho se modifica abajo*/
    height: 0.8rem;
    background-color: var(--color-secondary);
    border: 2px solid var(--color-principal);
